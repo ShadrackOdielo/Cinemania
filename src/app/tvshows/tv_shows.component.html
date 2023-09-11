@@ -1,0 +1,35 @@
+<!-- Search Input -->
+<div class="search-container">
+    <input
+            type="text"
+            [(ngModel)]="searchQuery"
+            (keyup.enter)="performSearch()"
+            placeholder="Search for TV shows..."
+    />
+    <button (click)="performSearch()">Search</button>
+</div>
+
+<!-- TV Show Listings -->
+<div class="tv-show-grid">
+    <div *ngFor="let tvshow of tvShows" class="tv-show-card" (click)="goToTvShowDetail(tvshow.id)">
+        <!-- Display TV show details here -->
+        <img [src]="tvshow?.image?.medium" alt="{{ tvshow.name }} Poster" class="tv-show-poster">
+        <div class="tv-show-info">
+            <h3>{{ tvshow.name }}</h3>
+            <p>{{ tvshow.first_air_date | date:'mediumDate' }}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Search Results (Displayed when searchQuery is not empty) -->
+<div class="search-results" *ngIf="searchQuery">
+    <h2>Search Results</h2>
+    <div *ngFor="let result of tvShows" class="tv-show-card" (click)="goToTvShowDetail(result.id)">
+        <!-- Display search result details here -->
+        <img [src]="result.image.medium" alt="{{ result.name }} Poster" class="tv-show-poster">
+        <div class="tv-show-info">
+            <h3>{{ result.name }}</h3>
+            <p>{{ result.first_air_date | date:'mediumDate' }}</p>
+        </div>
+    </div>
+</div>

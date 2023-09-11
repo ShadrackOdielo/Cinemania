@@ -1,0 +1,10 @@
+<div *ngIf="!isLoading">
+    <h2>{{ tvShow.name }}</h2>
+    <p>{{ tvShow.premiered | date:'mediumDate' }}</p>
+    <p>{{ tvShow.rating.average }}</p>
+    <img [src]="tvShow.image.medium" [alt]="tvShow.name">
+    <div [innerHTML]="tvShowSummary"></div>
+</div>
+<div *ngIf="isLoading">
+    <p>Loading TV show details...</p>
+</div>

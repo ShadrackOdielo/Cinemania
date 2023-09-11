@@ -1,0 +1,22 @@
+<!-- Movie Detail -->
+<div class="movie-detail">
+    <div class="movie-poster">
+        <img [src]="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt="{{ movie.title }} Poster">
+    </div>
+    <div class="movie-info">
+        <h2>{{ movie.title }}</h2>
+        <p>Release Date: {{ movie.release_date }}</p>
+        <p>Rating: {{ movie.vote_average }}/10</p>
+        <h3>Synopsis</h3>
+        <p>{{ movie.overview }}</p>
+        <h3>Trailer</h3>
+        <div class="video-container">
+            <iframe
+                    width="560"
+                    height="315"
+                    [src]="trailerUrl"
+                    allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</div>

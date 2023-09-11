@@ -1,0 +1,12 @@
+<div *ngIf="isLoading" class="loading-message">
+    Loading book details...
+</div>
+
+<div *ngIf="book" class="book-detail">
+    <h2>{{ book.title }}</h2>
+    <img [src]="book.cover_i ? 'https://covers.openlibrary.org/b/id/' + book.cover_i + '-L.jpg' : 'assets/placeholder.jpg'" alt="{{ book.title }} Cover" class="book-cover">
+    <p>Author: {{ book.author_name.join(', ') }}</p>
+    <p>First Published: {{ book.first_publish_year }}</p>
+    <p>Publisher: {{ book.publisher.join(', ') }}</p>
+    <p>Language: {{ book.language.join(', ') }}</p>
+</div>
