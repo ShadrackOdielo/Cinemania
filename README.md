@@ -1,6 +1,10 @@
-# CinemaniaFrontend
+# Cinemania Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+It is the frontend portion to my django cinemania app, it allows users to search for movies, tv and books through apis which allows for live reloading and getting the latest videos.
+the styling is not yet complete as i was still focused on functionality
+
+I used TMDB api for movies, TVMaze for series and Open library api for books. The website does not however allow you to watch movies or shows as those are copyrighted
 
 ## Development server
 
