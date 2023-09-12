@@ -1,0 +1,48 @@
+/* Movies Component */
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.movie-card {
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    /* make it inline-block so that it takes the width of its content */
+    display: inline-block;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-poster {
+    width: 100%;
+    height: auto;
+    
+}
+
+.movie-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: green; /* Use your primary blue color */
+}
+
+.movie-year {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Add more styling as needed */

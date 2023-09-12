@@ -17,6 +17,8 @@ interface Movie {
 })
 export class MoviesComponent implements OnInit {
     movies: Movie[] = [];
+    currentPage = 1;
+    totalPages = 0;
     isLoading = true;
 
     constructor(private movieService: MovieService) {}
