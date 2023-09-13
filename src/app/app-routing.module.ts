@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MoviesComponent } from './movies/movies.component';
 import {TvShowsComponent } from './tvshows/tv_shows.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BooksComponent } from './books/books.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'tv_shows/ongoing', component: TvShowsComponent, data: { filter: 'ongoing' } },
   { path: 'tv_shows/top_rated', component: TvShowsComponent, data: { filter: 'top_rated' } },
   { path: 'books', component: BooksComponent },
+  {path: 'books/:id', component: BookDetailComponent},
   { path: 'profile', component: UserProfileComponent },
   { path: 'home', component: HomeComponent },
   // Add more routes as needed

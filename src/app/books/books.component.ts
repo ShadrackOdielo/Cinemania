@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
 
 @Component({
-  selector: 'app-book',
+  selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css'],
 })
@@ -19,22 +19,23 @@ export class BooksComponent implements OnInit {
 
   loadPopularBooks(): void {
     this.bookService.getPopularBooks().subscribe((data: any) => {
-      this.books = data.works;
+      this.books = data.items;
     });
   }
 
-  handleBookClick(book: any): void {
-    // Handle book click, e.g., navigate to book details
-    console.log('Book clicked:', book);
+  goToBookDetail(bookId: string): void {
+    // Handle navigation to book details page using Angular Router
+    // You should implement this based on your project's routing configuration
   }
 
-  searchBookCovers(): void {
+  searchBooks(): void {
     if (this.searchQuery.trim() !== '') {
-      this.bookService.searchBooksByTitle(this.searchQuery).subscribe((data: any) => {
-        this.searchResults = data.docs;
+      this.bookService.searchBooks(this.searchQuery).subscribe((data: any) => {
+        this.searchResults = data.items;
       });
     } else {
       this.searchResults = [];
     }
   }
+  
 }

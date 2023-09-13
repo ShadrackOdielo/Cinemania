@@ -3,35 +3,21 @@
     <input
             type="text"
             [(ngModel)]="searchQuery"
-            (keyup.enter)="searchBookCovers()"
+            (keyup.enter)="searchBooks()"
             placeholder="Search for books..."
     />
-    <button (click)="searchBookCovers()">Search</button>
+    <button (click)="searchBooks()">Search</button>
 </div>
 
 <!-- Book Listings -->
 <div class="book-grid">
-    <div *ngFor="let book of books" class="book-card" (click)="handleBookClick(book)">
+    <div *ngFor="let book of books" class="book-card" [routerLink]="['/books', book.id]">
         <img
-                [src]="'http://covers.openlibrary.org/b/id/' + book.cover_i + '-L.jpg'"
-                alt="{{ book.title }} Cover"
+                [src]="book.volumeInfo.imageLinks?.thumbnail || 'assets/no-cover.png'"
+                alt="{{ book.volumeInfo.title }} Cover"
                 class="book-cover"
         />
-        <h3>{{ book.title }}</h3>
-        <p>{{ book.author_name.join(', ') }}</p>
-    </div>
-</div>
-
-<!-- Search Results (Displayed when searchQuery is not empty) -->
-<div class="search-results" *ngIf="searchQuery && searchResults.length > 0">
-    <h2>Search Results</h2>
-    <div *ngFor="let result of searchResults" class="book-card" (click)="handleBookClick(result)">
-        <img
-                [src]="'http://covers.openlibrary.org/b/id/' + result.cover_i + '-L.jpg'"
-                alt="{{ result.title }} Cover"
-                class="book-cover"
-        />
-        <h3>{{ result.title }}</h3>
-        <p>{{ result.author_name.join(', ') }}</p>
+        <h3>{{ book.volumeInfo.title }}</h3>
+        <p>{{ book.volumeInfo.authors?.join(', ') || 'Unknown Author' }}</p>
     </div>
 </div>

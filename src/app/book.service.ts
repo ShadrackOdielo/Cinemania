@@ -1,29 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookService {
-  private apiUrl = 'http://openlibrary.org';
+  private apiUrl = 'https://www.googleapis.com/books/v1/volumes';
 
   constructor(private http: HttpClient) {}
 
   // Fetch a list of popular books
   getPopularBooks(): Observable<any> {
-    const url = `${this.apiUrl}/subjects/best_sellers.json?limit=10`; // Adjust the limit as needed
-    return this.http.get(url);
+    const params = new HttpParams().set('q', 'subject:fiction').set('orderBy', 'newest').set('maxResults', '25');
+    return this.http.get(this.apiUrl, { params });
   }
 
-  // Search for books by title
-  searchBooksByTitle(query: string): Observable<any> {
-    const url = `${this.apiUrl}/search.json?q=${query}`;
-    return this.http.get(url);
+  // Search for books by title or author
+  searchBooks(query: string): Observable<any> {
+    const params = new HttpParams().set('q', query).set('maxResults', '10');
+    return this.http.get(this.apiUrl, { params });
   }
-  // get a book by its key
-    getBookDetails(key: string): Observable<any> {
-    const url = `${this.apiUrl}${key}.json`;
-    return this.http.get(url);
-    }
+
+  // Get book details by its ID
+  getBookDetails(bookId: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/${bookId}`);
+  }
 }
