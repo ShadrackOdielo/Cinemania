@@ -1,21 +1,33 @@
-<div class="landing-page">
-    <header>
-      <h1>Welcome to My Book and Movie Explorer</h1>
-      <p>Discover and explore your favorite books and movies!</p>
-    </header>
-  
-    <main>
-      <section>
-        <h2>Explore Books</h2>
-        <p>Find books by title, author, or genre. Get details, covers, and more.</p>
-        <a routerLink="/books" class="btn btn-primary">Explore Books</a>
-      </section>
-  
-      <section>
-        <h2>Discover Movies</h2>
-        <p>Search for movies by title, genre, or release year. Watch trailers and more.</p>
-        <a routerLink="/movies" class="btn btn-primary">Discover Movies</a>
-      </section>
-    </main>
-  </div>
-  
+<!-- landing-page.component.html -->
+<header class="landing-header">
+  <h1>Welcome to Cinemania</h1>
+  <p>Your Personal Media Explorer</p>
+</header>
+
+<main class="landing-main">
+  <section class="landing-feature">
+    <h2>Explore Books</h2>
+    <p>Find books by title, author, or genre. Get details, covers, and more.</p>
+    <a routerLink="/books" class="btn btn-primary">Explore Books</a>
+  </section>
+
+  <section class="landing-feature">
+    <h2>Discover Movies</h2>
+    <p>Search for movies by title, genre, or release year. Watch trailers and more.</p>
+    <a routerLink="/movies" class="btn btn-primary">Discover Movies</a>
+  </section>
+
+  <section class="landing-feature">
+    <h2>Discover TV Shows</h2>
+    <p>Search for TV Shows by title, genre, or release year. Watch trailers and more.</p>
+    <a routerLink="/tvshows" class="btn btn-primary">Discover TV Shows</a>
+  </section>
+</main>
+
+<section class="about-section">
+  <h2>About Cinemania</h2>
+  <p>Cinemania is your all-in-one platform for exploring and keeping track of your favorite books, movies, and TV shows. It's the place where you can seamlessly switch between different media types and discover new content based on your preferences.</p>
+  <p>Our journey began with a simple idea: to create a centralized hub for media enthusiasts like you. Whether you're a bookworm, a movie buff, or a TV series addict, Cinemania has got you covered.</p>
+  <p>Join us in the world of Cinemania and embark on a journey of exploration, discovery, and entertainment!</p>
+  <a routerLink="/about" class="btn btn-secondary">Learn More</a>
+</section>

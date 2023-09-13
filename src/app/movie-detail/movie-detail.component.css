@@ -1,6 +1,6 @@
 /* movies-detail.component.css */
 
-/* Container for movie details */
+/* Container for movie details  */
 .movie-detail {
     display: flex;
     justify-content: space-between;
@@ -15,6 +15,7 @@
   .movie-poster img {
     max-width: 300px;
     height: auto;
+    border-radius: 5px;
   }
   
   /* Movie information */
