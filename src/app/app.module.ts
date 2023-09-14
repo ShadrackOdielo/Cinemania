@@ -18,6 +18,8 @@ import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 
 
@@ -34,6 +36,9 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
     TvShowDetailComponent,
     SearchComponent,
     BookDetailComponent,
+    LandingPageComponent,
+    SearchComponent,
+    SearchResultsComponent,
   ],
   imports: [
     BrowserModule,

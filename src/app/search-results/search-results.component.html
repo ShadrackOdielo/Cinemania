@@ -1,0 +1,32 @@
+<!-- search-results.component.html -->
+<h1>Search Results</h1>
+
+<section>
+  <h2>Search Results for Movies</h2>
+  <div *ngFor="let movie of movies" class="search-result">
+    <!-- Display movie details here -->
+    <img [src]="movie.posterUrl" alt="{{ movie.title }} Poster">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.releaseDate }}</p>
+  </div>
+</section>
+
+<section>
+  <h2>Search Results for TV Shows</h2>
+  <div *ngFor="let tvShow of tvShows" class="search-result">
+    <!-- Display TV show details here -->
+    <img [src]="tvShow.posterUrl" alt="{{ tvShow.name }} Poster">
+    <h3>{{ tvShow.name }}</h3>
+    <p>{{ tvShow.firstAirDate }}</p>
+  </div>
+</section>
+
+<section>
+  <h2>Search Results for Books</h2>
+  <div *ngFor="let book of books" class="search-result">
+    <!-- Display book details here -->
+    <img [src]="book.coverUrl" alt="{{ book.title }} Cover">
+    <h3>{{ book.title }}</h3>
+    <p>{{ book.author }}</p>
+  </div>
+</section>

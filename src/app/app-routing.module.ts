@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MoviesComponent } from './movies/movies.component';
@@ -9,9 +9,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HomeComponent } from './home/home.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { TvShowDetailComponent } from './tv-show-detail/tv-show-detail.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SearchComponent } from './search/search.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '' ,component: LandingPageComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'movies/:id', component: MovieDetailComponent },
   { path: 'tv_shows', component: TvShowsComponent },
@@ -24,6 +27,7 @@ const routes: Routes = [
   {path: 'books/:id', component: BookDetailComponent},
   { path: 'profile', component: UserProfileComponent },
   { path: 'home', component: HomeComponent },
+  {path: 'search',component: SearchResultsComponent}
   // Add more routes as needed
 ];
 

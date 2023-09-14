@@ -1,65 +1,22 @@
-/* landing-page.component.css */
-/* landing-page.component.css */
-.landing-header {
-    text-align: center;
-    padding: 60px 0;
-  }
-  
-  .landing-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 0;
-  }
-  
-  .landing-feature {
-    text-align: center;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
-.about-section {
-    background-color: #f5f5f5;
-    padding: 40px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-  }
-  
-  .about-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .about-section p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .about-section .btn-secondary {
-    background-color: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .about-section .btn-secondary:hover {
-    background-color: #0056b3;
-  }
-  
+/* home.component.css */
+.featured-section {
+  margin-bottom: 20px;
+}
+
+.featured-movie,
+.featured-book,
+.featured-tvshow {
+  width: 200px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.featured-movie img,
+.featured-book img,
+.featured-tvshow img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Add more styles as needed */
