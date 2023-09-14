@@ -1,8 +1,18 @@
-<!-- home.component.html -->
 <div class="landing-page">
   <header>
     <h1>Welcome to Cinemania</h1>
     <p>Your Personal Media Explorer</p>
+    <!-- Add the search bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search for movies, books, TV shows..."
+        (keyup.enter)="search(query)"
+        [(ngModel)]="query"
+      />
+      <button (click)="search(query)">Search</button>
+    </div>
+    
   </header>
 
   <main>
@@ -10,10 +20,18 @@
     <section class="featured-section">
       <h2>Featured Movies</h2>
       <div class="featured-movies">
-        <div *ngFor="let movie of featuredMovies" class="featured-movie">
-          <img [src]="movie.poster" alt="{{ movie.title }} Poster">
+        <!-- Display featured movies -->
+        <div
+          *ngFor="let movie of featuredMovies; let i = index"
+          class="featured-movie"
+          [class.active]="i === currentMovieIndex"
+        >
+          <img [src]="'https://image.tmdb.org/t/p/w300/' + movie.poster_path" alt="{{ movie.title }} Poster" />
           <h3>{{ movie.title }}</h3>
         </div>
+        <!-- Add navigation arrows for movies -->
+        <button (click)="prevMovie()" class="nav-button">◄</button>
+        <button (click)="nextMovie()" class="nav-button">►</button>
       </div>
     </section>
 
@@ -21,10 +39,18 @@
     <section class="featured-section">
       <h2>Featured Books</h2>
       <div class="featured-books">
-        <div *ngFor="let book of featuredBooks" class="featured-book">
-          <img [src]="book.cover" alt="{{ book.title }} Cover">
+        <!-- Display featured books -->
+        <div
+          *ngFor="let book of featuredBooks; let i = index"
+          class="featured-book"
+          [class.active]="i === currentBookIndex"
+        >
+          <img [src]="book.cover" alt="{{ book.title }} Cover" />
           <h3>{{ book.title }}</h3>
         </div>
+        <!-- Add navigation arrows for books -->
+        <button (click)="prevBook()" class="nav-button">◄</button>
+        <button (click)="nextBook()" class="nav-button">►</button>
       </div>
     </section>
 
@@ -32,10 +58,18 @@
     <section class="featured-section">
       <h2>Featured TV Shows</h2>
       <div class="featured-tvshows">
-        <div *ngFor="let tvshow of featuredTVShows" class="featured-tvshow">
-          <img [src]="tvshow.poster" alt="{{ tvshow.title }} Poster">
-          <h3>{{ tvshow.title }}</h3>
+        <!-- Display featured TV shows -->
+        <div
+          *ngFor="let tvshow of featuredTVShows; let i = index"
+          class="featured-tvshow"
+          [class.active]="i === currentTVShowIndex"
+        >
+          <img [src]="tvshow.image.medium" alt="{{ tvshow.name }} Poster" />
+          <h3>{{ tvshow.name }}</h3>
         </div>
+        <!-- Add navigation arrows for TV shows -->
+        <button (click)="prevTVShow()" class="nav-button">◄</button>
+        <button (click)="nextTVShow()" class="nav-button">►</button>
       </div>
     </section>
   </main>

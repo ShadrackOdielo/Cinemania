@@ -14,7 +14,8 @@ import { SearchComponent } from './search/search.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 
 const routes: Routes = [
-  { path: '' ,component: LandingPageComponent },
+  // add redirect to home route
+  {path: 'landing', component: LandingPageComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'movies/:id', component: MovieDetailComponent },
   { path: 'tv_shows', component: TvShowsComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: 'books/:id', component: BookDetailComponent},
   { path: 'profile', component: UserProfileComponent },
   { path: 'home', component: HomeComponent },
-  {path: 'search',component: SearchResultsComponent}
+  {path: 'search',component: SearchResultsComponent},
+  {path: '', component: HomeComponent}
   // Add more routes as needed
 ];
 

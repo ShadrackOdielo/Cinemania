@@ -1,15 +1,52 @@
-/* home.component.css */
-.featured-section {
-  margin-bottom: 20px;
+/* Add these styles to create a carousel effect */
+
+.featured-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.arrow {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+.left {
+  position: absolute;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.featured-movies,
+.featured-books,
+.featured-tvshows {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
 }
 
 .featured-movie,
 .featured-book,
 .featured-tvshow {
-  width: 200px;
-  margin-right: 20px;
-  display: inline-block;
-  vertical-align: top;
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 300px;
+  transition: transform 0.3s ease;
 }
 
 .featured-movie img,
@@ -19,4 +56,63 @@
   height: auto;
 }
 
-/* Add more styles as needed */
+.featured-movie h3,
+.featured-book h3,
+.featured-tvshow h3 {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Adjust the transform values for your desired slide effect */
+.featured-movie:hover,
+.featured-book:hover,
+.featured-tvshow:hover {
+  transform: scale(1.05);
+}
+/* Add styles for the search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Add styles for the navigation buttons */
+.nav-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Highlight the active featured item */
+.featured-movie.active,
+.featured-book.active,
+.featured-tvshow.active {
+  border: 2px solid #007bff;
+  padding: 8px;
+}
+
+/* Additional styles as needed */
