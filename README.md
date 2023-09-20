@@ -3,11 +3,16 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 It is the frontend portion to my django cinemania app, it allows users to search for movies, tv and books through apis which allows for live reloading and getting the latest videos.
 the styling is not yet complete as i was still focused on functionality
-
-I used TMDB api for movies, TVMaze for series and Open library api for books. The website does not however allow you to watch movies or shows as those are copyrighted
-
+## Technologies and services
+- I used TMDB api for movies, TVMaze for series and Open library api for books. The website does not however allow you to watch movies or shows as those are copyrighted
+- I used karma for testing and configured the apis to allow for intergraiton with django or firebase on the backend, I feature I intend to add later
+- Postman was used to test API endpoints
+## What is this for?
+- This site is intended to be a centralised hub foor creating and managing information about your viewing and reading history.
+- This is especially targeted towards immersion learners of a foreign language who seek to keep track of their viewing history.
+- I inted to include library and chat functionalities to enable users to keep records and make favorite lists and also to filter by language.
 ## views
-
+These are the currently available views.
 ### tv view
 this is what the user sees at the moment when they view the tv shows
 ![tv view image](./src/assets/shows.png)
@@ -46,9 +51,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Authors
--shadrack odielo
-##licensing
--MIT
+- shadrack odielo
+## licensing
+-*MIT*
 ## Can I contribute
 This site is a work in progress and therefore anyone can submit a pull request to make changes to the site. i will continue to add functionality as time goes by.
 
