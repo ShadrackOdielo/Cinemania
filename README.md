@@ -6,6 +6,20 @@ the styling is not yet complete as i was still focused on functionality
 
 I used TMDB api for movies, TVMaze for series and Open library api for books. The website does not however allow you to watch movies or shows as those are copyrighted
 
+## views
+
+### tv view
+![tv view image](./src/assets/shows.png)
+### movies
+![tv view image](./src/assets/movies.png)
+
+### books
+![tv view image](./src/assets/books.png)
+
+### landing page
+![tv view image](./src/assets/)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
