@@ -9,6 +9,7 @@ I used TMDB api for movies, TVMaze for series and Open library api for books. Th
 ## views
 
 ### tv view
+this is what the user sees at the moment when they view the tv shows
 ![tv view image](./src/assets/shows.png)
 ### movies
 ![tv view image](./src/assets/movies.png)
@@ -43,3 +44,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Authors
+-shadrack odielo
+##licensing
+-MIT
+## Can I contribute
+This site is a work in progress and therefore anyone can submit a pull request to make changes to the site. i will continue to add functionality as time goes by.
+
